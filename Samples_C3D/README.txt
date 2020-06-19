@@ -1,0 +1,1 @@
+All the C3D sample files in this folder are from https://www.c3d.org/.

@@ -1,0 +1,1 @@
+This folder contains C3D files generously submitted by manufacturers to C3D.ORG for the web site upgrade in 2019 to demonstrate each companies implementation of the C3D file format.
