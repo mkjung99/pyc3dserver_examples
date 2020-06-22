@@ -19,17 +19,19 @@ itf = c3d.c3dserver()
 c3d.init_logger(logger_lvl='DEBUG', c_hdlr_lvl='WARNING', f_hdlr_lvl='DEBUG', f_hdlr_f_path=tgt_log_path)
 
 ret = c3d.open_c3d(itf, src_c3d_path, log=True)
-# Change a marker's name from 'pv4' to 'PV4'
-ret = c3d.change_marker_name(itf, 'pv4', 'PV4', log=True)
 c3d_f_type = c3d.get_file_type(itf)
 c3d_data_type = c3d.get_data_type(itf)
+
+# Change a marker's name from 'pv4' to 'PV4'
+ret = c3d.change_marker_name(itf, 'pv4', 'PV4', log=True)
+
 # dict_header = c3d.get_dict_header(itf)
 # dict_groups = c3d.get_dict_groups(itf)
 # dict_markers = c3d.get_dict_markers(itf, blocked_nan=True, residual=True, mask=False, time=True)
 # dict_mkr_pos = dict_markers['DATA']['POS']
 
 # Try to test different gap filling functions
-c3d.fill_marker_gap_rbt(itf, 'PV2', ('PV1', 'PV3', 'PV4'), log=True)
+c3d.fill_marker_gap_rbt(itf, 'PV2', ['PV1', 'PV3', 'PV4'], log=True)
 # c3d.fill_marker_gap_pattern(itf, tgt_mkr_name='PV2', dnr_mkr_name='PV3', log=True)
 # c3d.fill_marker_gap_interp(itf, 'PV2', log=True)
 

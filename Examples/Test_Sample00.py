@@ -20,9 +20,9 @@ c3d.init_logger(logger_lvl='DEBUG', c_hdlr_lvl='WARNING', f_hdlr_lvl='DEBUG', f_
 
 ret = c3d.open_c3d(itf, src_c3d_path, log=True)
 # dict_header = c3d.get_dict_header(itf)
-# dict_groups = c3d.get_dict_groups(itf)
+# dict_groups = c3d.get_dict_groups(itf, tgt_grp_names=('POINT', 'ANALOG', 'FORCE_PLATFORM'))
 # dict_forces = c3d.get_dict_forces(itf, frame=True, time=True)
-dict_markers = c3d.get_dict_markers(itf, blocked_nan=True, residual=True, mask=False, frame=True, time=True)
+dict_markers = c3d.get_dict_markers(itf, blocked_nan=True, resid=True, mask=False, desc=False, frame=False, time=False)
 dict_mkr_pos = dict_markers['DATA']['POS']
 
 # Add a new marker 'Test1'
@@ -31,10 +31,10 @@ new_mkr_pos = (dict_mkr_pos['RASI']+dict_mkr_pos['LASI'])*0.5
 c3d.add_marker(itf, new_mkr_name, new_mkr_pos, mkr_resid=None, mkr_desc='Test1', log=True)
 
 # Add a new analog channel 'Test2'
-an_fps = c3d.get_analog_fps(itf)
-an_time = c3d.get_analog_times(itf)
+anl_fps = c3d.get_analog_fps(itf)
+anl_time = c3d.get_analog_times(itf)
 new_an_ch_name = 'Test2'
-new_an_ch_val = 100.0*np.cos(an_time*((2*np.pi)/(1.0)))
+new_an_ch_val = 100.0*np.cos(anl_time*((2*np.pi)/(1.0)))
 c3d.add_analog(itf, new_an_ch_name, new_an_ch_val, sig_unit='mV', sig_desc='Test2', log=True)
 
 ret = c3d.save_c3d(itf, tgt_c3d_path, log=True)
