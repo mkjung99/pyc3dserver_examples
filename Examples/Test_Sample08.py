@@ -27,7 +27,7 @@ ret = c3d.change_marker_name(itf, 'pv4', 'PV4', log=True)
 
 # dict_header = c3d.get_dict_header(itf)
 # dict_groups = c3d.get_dict_groups(itf)
-# dict_markers = c3d.get_dict_markers(itf, blocked_nan=True, residual=True, mask=False, time=True)
+# dict_markers = c3d.get_dict_markers(itf, blocked_nan=True, resid=True, mask=False, time=True)
 # dict_mkr_pos = dict_markers['DATA']['POS']
 
 # Try to test different gap filling functions

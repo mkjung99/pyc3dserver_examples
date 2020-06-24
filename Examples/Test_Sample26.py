@@ -21,7 +21,7 @@ ret = c3d.open_c3d(itf, src_c3d_path, log=True)
 c3d_f_type = c3d.get_file_type(itf)
 # dict_header = c3d.get_dict_header(itf)
 # dict_groups = c3d.get_dict_groups(itf)
-# dict_markers = c3d.get_dict_markers(itf, blocked_nan=True, residual=True, mask=False, time=True)
+# dict_markers = c3d.get_dict_markers(itf, blocked_nan=True, resid=True, mask=False, time=True)
 
 c3d.recover_marker_rel(itf, 'L_SHANK_2', ['L_SHANK_1', 'L_SHANK_3', 'L_SHANK_4'], log=True)
 # c3d.fill_marker_gap_pattern(itf, tgt_mkr_name='L_SHANK_2', dnr_mkr_name='L_SHANK_1', log=True)
