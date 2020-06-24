@@ -18,7 +18,7 @@ c3d.init_logger(logger_lvl='DEBUG', c_hdlr_lvl='DEBUG', f_hdlr_lvl='DEBUG', f_hd
 ret = c3d.open_c3d(itf, src_c3d_path)
 dict_header = c3d.get_dict_header(itf)
 dict_groups = c3d.get_dict_groups(itf)
-dict_markers = c3d.get_dict_markers(itf, log=True)
+dict_markers = c3d.get_dict_markers(itf, desc=True, log=True)
 dict_forces = c3d.get_dict_forces(itf, desc=True, frame=True, time=True, log=True)
 dict_analogs = c3d.get_dict_analogs(itf, desc=True, log=True)
 ret = c3d.close_c3d(itf)
