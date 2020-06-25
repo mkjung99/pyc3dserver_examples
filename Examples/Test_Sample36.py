@@ -10,13 +10,13 @@ import pyc3dserver as c3d
 import numpy as np
 #%%
 c3d_sample_dir_path = os.path.join(os.getcwd(), r'..\Samples_C3D\Sample36')
-src_c3d_path = os.path.join(c3d_sample_dir_path, '72610framesi.c3d')
+src_c3d_path = os.path.join(c3d_sample_dir_path, '72610framesf.c3d')
 
 itf = c3d.c3dserver()
 ret = c3d.open_c3d(itf, src_c3d_path)
 dict_header = c3d.get_dict_header(itf)
 dict_groups = c3d.get_dict_groups(itf)
 dict_markers = c3d.get_dict_markers(itf, frame=True, time=True)
-dict_forces = c3d.get_dict_forces(itf)
-dict_analogs = c3d.get_dict_analogs(itf)
+# dict_forces = c3d.get_dict_forces(itf)
+# dict_analogs = c3d.get_dict_analogs(itf)
 ret = c3d.close_c3d(itf)

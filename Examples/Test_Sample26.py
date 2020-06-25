@@ -18,7 +18,7 @@ itf = c3d.c3dserver()
 c3d.init_logger(logger_lvl='INFO', c_hdlr_lvl='DEBUG', f_hdlr_lvl='DEBUG', f_hdlr_f_path=None)
 
 ret = c3d.open_c3d(itf, src_c3d_path, log=True)
-c3d_f_type = c3d.get_file_type(itf)
+# c3d_f_type = c3d.get_file_type(itf)
 # dict_header = c3d.get_dict_header(itf)
 # dict_groups = c3d.get_dict_groups(itf)
 # dict_markers = c3d.get_dict_markers(itf, blocked_nan=True, resid=True, mask=False, time=True)
