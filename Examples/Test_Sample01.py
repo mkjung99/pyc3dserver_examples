@@ -9,7 +9,8 @@ if os.path.exists(lib_local_path):
 import pyc3dserver as c3d
 import numpy as np
 #%%
-c3d_sample_dir_path = os.path.join(os.getcwd(), r'..\Samples_C3D\Sample01')
+current_f_dir_path = os.path.dirname(__file__)
+c3d_sample_dir_path = os.path.join(current_f_dir_path, r'..\Samples_C3D\Sample01')
 src_c3d_path = os.path.join(c3d_sample_dir_path, 'Eb015pi.c3d')
 tgt_c3d_path = os.path.splitext(__file__)[0]+'_result.c3d'
 

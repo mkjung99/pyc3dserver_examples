@@ -10,7 +10,8 @@ import pyc3dserver as c3d
 import numpy as np
 import logging
 #%%
-c3d_sample_dir_path = os.path.join(os.getcwd(), r'..\Samples_C3D\Sample00\Vicon Motion Systems')
+current_f_dir_path = os.path.dirname(__file__)
+c3d_sample_dir_path = os.path.join(current_f_dir_path, r'..\Samples_C3D\Sample00\Vicon Motion Systems')
 src_c3d_path = os.path.join(c3d_sample_dir_path, 'pyCGM2 lower limb CGM24 Walking01.c3d')
 tgt_c3d_path = os.path.splitext(__file__)[0]+'_result.c3d'
 tgt_log_path = os.path.splitext(__file__)[0]+'_result.log'

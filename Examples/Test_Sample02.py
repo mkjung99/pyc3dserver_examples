@@ -10,7 +10,8 @@ import pyc3dserver as c3d
 import numpy as np
 # import logging
 #%%
-c3d_sample_dir_path = os.path.join(os.getcwd(), r'..\Samples_C3D\Sample02')
+current_f_dir_path = os.path.dirname(__file__)
+c3d_sample_dir_path = os.path.join(current_f_dir_path, r'..\Samples_C3D\Sample02')
 src_c3d_path = os.path.join(c3d_sample_dir_path, 'dec_int.c3d')
 
 itf = c3d.c3dserver()
