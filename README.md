@@ -1,4 +1,4 @@
-# PyC3Dserver_examples
+# PyC3Dserver examples
 Examples of PyC3Dserver module
 
 ## Example files
