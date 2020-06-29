@@ -20,12 +20,13 @@ dict_markers = c3d.get_dict_markers(itf, blocked_nan=True, resid=True, frame=Tru
 mkr_pos = dict_markers['DATA']['POS']
 mkr_names = c3d.get_marker_names(itf)
 frames = dict_markers['FRAME']-dict_markers['FRAME'][0]
-plotter = pv.Plotter(line_smoothing=True, point_smoothing=True, window_size=[1280, 640])
+plotter = pv.Plotter(line_smoothing=True, point_smoothing=True, window_size=[1500, 500])
 plotter.set_background(color=[1, 1, 1])
 plotter.enable_parallel_projection()
 plotter.add_axes(color=[0, 0, 0])
-# plotter.show_bounds(color=[0, 0, 0], location='outer', grid=False, ticks='inside', padding=0.5)
+plotter.show_bounds(color=[0, 0, 0], location='outer', grid=False, ticks='inside', padding=0.5)
 
+# frames_new = np.arange(221-63, 439-63, 5)
 frames_new = np.arange(221-63, 334-63, 1)
 cl_grps = [['RASI', 'RPSI', 'LPSI', 'LASI', 'RASI'],\
     ['RHJC_CGM_2.4', 'RKJC_CGM_2.4', 'RAJC_CGM_2.4', 'RFJC_CGM_2.4', 'RHEE', 'RAJC_CGM_2.4'],\
@@ -49,6 +50,6 @@ plotter.add_scalar_bar(title='Cycle(%)', color=[0, 0, 0], fmt='%.0f')
 plotter.view_yz(negative=True)
 # plotter.set_scale(xscale=1.5, yscale=1.5, zscale=1.5, reset_camera=False)
 plotter.show(title='PyC3Dserver')
-plotter.screenshot(filename='test.png', transparent_background=False)
+# plotter.screenshot(filename='test.png', transparent_background=False)
 
 ret = c3d.close_c3d(itf)
