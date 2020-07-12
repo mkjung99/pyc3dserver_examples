@@ -38,5 +38,5 @@ new_an_ch_name = 'Test2'
 new_an_ch_val = 100.0*np.cos(anl_time*((2*np.pi)/(1.0)))
 c3d.add_analog(itf, new_an_ch_name, new_an_ch_val, sig_unit='mV', sig_desc='Test2', log=True)
 
-ret = c3d.save_c3d(itf, tgt_c3d_path, log=True)
+ret = c3d.save_c3d(itf, tgt_c3d_path, compress_param_blocks=True, log=True)
 ret = c3d.close_c3d(itf, log=True)
