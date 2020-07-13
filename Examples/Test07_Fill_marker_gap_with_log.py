@@ -32,8 +32,8 @@ ret = c3d.change_marker_name(itf, 'pv4', 'PV4', log=True)
 # dict_mkr_pos = dict_markers['DATA']['POS']
 
 # Try to test different gap filling functions
-c3d.fill_marker_gap_rbt(itf, 'PV2', ['PV1', 'PV3', 'PV4'], log=True)
-# c3d.fill_marker_gap_pattern(itf, tgt_mkr_name='PV2', dnr_mkr_name='PV3', log=True)
+# c3d.fill_marker_gap_rbt(itf, 'PV2', ['PV1', 'PV3', 'PV4'], log=True)
+c3d.fill_marker_gap_pattern(itf, tgt_mkr_name='PV2', dnr_mkr_name='PV4', log=True)
 # c3d.fill_marker_gap_interp(itf, 'PV2', log=True)
 
 ret = c3d.save_c3d(itf, tgt_c3d_path, log=True)
