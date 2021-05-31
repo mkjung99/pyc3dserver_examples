@@ -48,7 +48,7 @@ itf = c3d.c3dserver()
 c3d.init_logger(logger_lvl='DEBUG', c_hdlr_lvl='DEBUG', f_hdlr_lvl='DEBUG', f_hdlr_f_path=None)
 ret = c3d.open_c3d(itf, src_c3d_path)
 
-fp_output = c3d.get_fp_output(itf, 5.0, log=True)
+fp_output = c3d.get_fp_output(itf, threshold=0.0, filt_fc=None, log=True)
 
 # ground reaction force from a force plate to a subject, expressed in the force plate's local coordinate system, at its top surface center
 f_surf_local = fp_output[0]['F_SURF_LOCAL']
