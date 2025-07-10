@@ -2,7 +2,7 @@ import os
 import sys
 if sys.path[0] != os.getcwd():
     sys.path.insert(0, os.getcwd())
-lib_local_path = os.path.normpath(r'C:\WORKSPACE\DEV\pyc3dserver')
+lib_local_path = os.path.normpath(r'..\..\pyc3dserver')
 if os.path.exists(lib_local_path):
     if sys.path[1] != lib_local_path:
         sys.path.insert(1, lib_local_path)
